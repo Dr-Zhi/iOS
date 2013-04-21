@@ -16,11 +16,11 @@
 		B2550ED7171111F400EEB387 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B2550ED6171111F400EEB387 /* Default.png */; };
 		B2550ED9171111F400EEB387 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2550ED8171111F400EEB387 /* Default@2x.png */; };
 		B2550EDB171111F400EEB387 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2550EDA171111F400EEB387 /* Default-568h@2x.png */; };
-		B2550EDE171111F400EEB387 /* pageAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2550EDD171111F400EEB387 /* pageAppViewController.m */; };
 		B2550EE1171111F400EEB387 /* pageAppViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2550EDF171111F400EEB387 /* pageAppViewController_iPhone.xib */; };
 		B2550EE4171111F400EEB387 /* pageAppViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2550EE2171111F400EEB387 /* pageAppViewController_iPad.xib */; };
 		B2550EED1711127300EEB387 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2550EEB1711127300EEB387 /* ContentViewController.m */; };
 		B2550EEE1711127300EEB387 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2550EEC1711127300EEB387 /* ContentViewController.xib */; };
+		B289C4831712A71900833A0C /* pageApp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = B289C4821712A71900833A0C /* pageApp.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +38,12 @@
 		B2550ED8171111F400EEB387 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B2550EDA171111F400EEB387 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B2550EDC171111F400EEB387 /* pageAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pageAppViewController.h; sourceTree = "<group>"; };
-		B2550EDD171111F400EEB387 /* pageAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pageAppViewController.m; sourceTree = "<group>"; };
 		B2550EE0171111F400EEB387 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/pageAppViewController_iPhone.xib; sourceTree = "<group>"; };
 		B2550EE3171111F400EEB387 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/pageAppViewController_iPad.xib; sourceTree = "<group>"; };
 		B2550EEA1711127300EEB387 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		B2550EEB1711127300EEB387 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		B2550EEC1711127300EEB387 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		B289C4821712A71900833A0C /* pageApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pageApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +90,10 @@
 		B2550ECA171111F400EEB387 /* pageApp */ = {
 			isa = PBXGroup;
 			children = (
+				B289C4821712A71900833A0C /* pageApp.entitlements */,
 				B2550ED3171111F400EEB387 /* pageAppAppDelegate.h */,
 				B2550ED4171111F400EEB387 /* pageAppAppDelegate.m */,
 				B2550EDC171111F400EEB387 /* pageAppViewController.h */,
-				B2550EDD171111F400EEB387 /* pageAppViewController.m */,
 				B2550EDF171111F400EEB387 /* pageAppViewController_iPhone.xib */,
 				B2550EE2171111F400EEB387 /* pageAppViewController_iPad.xib */,
 				B2550EEA1711127300EEB387 /* ContentViewController.h */,
@@ -177,6 +177,7 @@
 				B2550EE1171111F400EEB387 /* pageAppViewController_iPhone.xib in Resources */,
 				B2550EE4171111F400EEB387 /* pageAppViewController_iPad.xib in Resources */,
 				B2550EEE1711127300EEB387 /* ContentViewController.xib in Resources */,
+				B289C4831712A71900833A0C /* pageApp.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +190,6 @@
 			files = (
 				B2550ED1171111F400EEB387 /* main.m in Sources */,
 				B2550ED5171111F400EEB387 /* pageAppAppDelegate.m in Sources */,
-				B2550EDE171111F400EEB387 /* pageAppViewController.m in Sources */,
 				B2550EED1711127300EEB387 /* ContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +235,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = FakeCodeSign;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = FakeCodeSign;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -250,6 +251,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -266,7 +269,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = FakeCodeSign;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = FakeCodeSign;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -274,6 +278,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -283,10 +289,14 @@
 		B2550EE8171111F400EEB387 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = FakeCodeSign;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = FakeCodeSign;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pageApp/pageApp-Prefix.pch";
 				INFOPLIST_FILE = "pageApp/pageApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -294,10 +304,14 @@
 		B2550EE9171111F400EEB387 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = FakeCodeSign;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = FakeCodeSign;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pageApp/pageApp-Prefix.pch";
 				INFOPLIST_FILE = "pageApp/pageApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -321,6 +335,7 @@
 				B2550EE9171111F400EEB387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
