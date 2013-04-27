@@ -21,6 +21,7 @@
 		B2550EED1711127300EEB387 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2550EEB1711127300EEB387 /* ContentViewController.m */; };
 		B2550EEE1711127300EEB387 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2550EEC1711127300EEB387 /* ContentViewController.xib */; };
 		B289C4831712A71900833A0C /* pageApp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = B289C4821712A71900833A0C /* pageApp.entitlements */; };
+		B289C4FB1716891200833A0C /* pageAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B289C4FA1716891200833A0C /* pageAppViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B2550EEB1711127300EEB387 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		B2550EEC1711127300EEB387 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		B289C4821712A71900833A0C /* pageApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pageApp.entitlements; sourceTree = "<group>"; };
+		B289C4FA1716891200833A0C /* pageAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pageAppViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B2550ED3171111F400EEB387 /* pageAppAppDelegate.h */,
 				B2550ED4171111F400EEB387 /* pageAppAppDelegate.m */,
 				B2550EDC171111F400EEB387 /* pageAppViewController.h */,
+				B289C4FA1716891200833A0C /* pageAppViewController.m */,
 				B2550EDF171111F400EEB387 /* pageAppViewController_iPhone.xib */,
 				B2550EE2171111F400EEB387 /* pageAppViewController_iPad.xib */,
 				B2550EEA1711127300EEB387 /* ContentViewController.h */,
@@ -191,6 +194,7 @@
 				B2550ED1171111F400EEB387 /* main.m in Sources */,
 				B2550ED5171111F400EEB387 /* pageAppAppDelegate.m in Sources */,
 				B2550EED1711127300EEB387 /* ContentViewController.m in Sources */,
+				B289C4FB1716891200833A0C /* pageAppViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
