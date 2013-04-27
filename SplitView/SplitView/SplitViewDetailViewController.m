@@ -17,6 +17,7 @@
 @implementation SplitViewDetailViewController
 
 - (void)dealloc {
+    _webView.delegate = nil;
     [_webView release];
     [_masterPopoverController release];
     [super dealloc];
@@ -26,7 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
+    self.webView.delegate = self;
+    if (self.isWebViewLoaded == NO && self.URLForWebView) {
+        [self webViewLoadURL:self.URLForWebView];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +47,14 @@
     }
     return self;
 }
+
+- (void) webViewLoadURL:(NSString *) ipURLString {
+    self.URLForWebView = ipURLString;
+    NSURL * lpUrl = [NSURL URLWithString:self.URLForWebView];
+    NSURLRequest * lpRequest = [NSURLRequest requestWithURL:lpUrl];
+    self.webView.scalesPageToFit = YES;
+    [self.webView loadRequest:lpRequest];
+}
 							
 #pragma mark - Split view
 
@@ -54,6 +68,12 @@
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+#pragma mark - UIWebViewDelegate protocal
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    self.isWebViewLoaded = YES;
 }
 
 @end

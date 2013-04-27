@@ -49,6 +49,7 @@
     // initial selection
     NSIndexPath * lpIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView selectRowAtIndexPath:lpIndexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    [self tableView:self.tableView didSelectRowAtIndexPath:lpIndexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -123,10 +124,7 @@
         //[self.masterPopoverController dismissPopoverAnimated:YES];
     }
     NSString * lpUrlString = self.siteAddresses[indexPath.row];
-    NSURL * lpUrl = [NSURL URLWithString:lpUrlString];
-    NSURLRequest * lpRequest = [NSURLRequest requestWithURL:lpUrl];
-    self.detailViewController.webView.scalesPageToFit = YES;
-    [self.detailViewController.webView loadRequest:lpRequest];
+    [self.detailViewController webViewLoadURL:lpUrlString];
 }
 
 @end
